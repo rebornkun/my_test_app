@@ -1,0 +1,148 @@
+.home{
+    margin-top: 140px;
+    width: 100vw;
+    height: 100%;
+    padding-bottom: 67px;
+}
+
+.hero_image{
+    width: 100%;
+    height: 550px;
+    background-image: url(../../assets/hero.png);
+    background-repeat: round;
+}
+
+.hero_image_container{
+    padding: 0px 77px;
+}
+.hero_image_container h1{
+    position: absolute;
+    width: 490px;
+    height: 282px;
+    left: 77px;
+    top: 247px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 94px;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+}
+
+.home_body{
+    width: 100vw;
+    height: 100%;
+}
+
+.searchbar{
+    margin: 63px 0px 48px;
+}
+
+.searchbar_container{
+    padding: 0px 77px;
+}
+
+.searchbar p{
+    width: 77px;
+    height: 31px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+
+    color: #000000;
+}
+.search_input{
+    width: 100%;
+    height: 54px;
+    border: 1px solid #000000;
+    padding: 20px;
+    font-size: normal;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+}
+
+.movie_categories{
+    width: 100%;
+}
+
+.movie_categories_container{
+    padding-left: 77px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+@media screen and (max-width: 834px) {
+    
+    .hero_image_container h1 {
+        position: absolute;
+        width: 490px;
+        height: 282px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .home {
+        margin-top: 67px;
+        width: 100vw;
+        height: 100%;
+        padding-bottom: 67px;
+    }
+
+    .hero_image {
+        width: 100%;
+        height: 257px;
+    }   
+
+    .hero_image_container h1 {
+        position: absolute;
+        width: 273px;
+        height: 72px;
+        top: 163px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.05em;
+    }
+
+    .searchbar{
+        margin: 56px 0px 33px;
+    }
+
+    .searchbar_container{
+        padding: 0px 28px;
+    }
+    
+    .searchbar p{
+        width: 51px;
+        height: 21px;
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 4px;
+    }
+    
+    .search_input{
+        width: 100%;
+        height: 34px;
+        padding: 5px;
+        font-size: 12px;
+    }
+    
+    .movie_categories_container{
+        padding-left: 28px;
+        gap: 33px;
+    }
+
+}
