@@ -8,6 +8,8 @@ function App() {
   
   const [movieListOne, setMovieListOne] = useState([])
   const [movieListTwo, setMovieListTwo] = useState([])
+  const [searched, setSearched] = useState(false)
+  const [searchedList, setSearchedList] = useState([])
 
   useEffect(()=>{
     getMovieCategory1()
@@ -18,8 +20,8 @@ function App() {
   // const url = 'http://www.omdbapi.com/?i=tt3896198&apikey=5a01d966'
   const category1 = 'action'
   const category2 = 'comedy'
-  const firstUrl = `http://www.omdbapi.com/?s=${category1}&apikey=5a01d966`
-  const secondUrl = `http://www.omdbapi.com/?s=${category2}&apikey=5a01d966`
+  const firstUrl = `https://www.omdbapi.com/?s=${category1}&apikey=5a01d966`
+  const secondUrl = `https://www.omdbapi.com/?s=${category2}&apikey=5a01d966`
   
   const getMovieCategory1 = async () => {
     let res = await fetch(firstUrl)
@@ -33,8 +35,24 @@ function App() {
     setMovieListTwo(data.Search)
   }
 
+  const handleSearch = () => {
+    const searchbox = document.getElementById('search_input')
+    let value = searchbox.value
+
+    const searchUrl = `https://www.omdbapi.com/?s=${value}&apikey=5a01d966`
+    searchMovie(searchUrl)
+    
+  }
+
+  const searchMovie = async (searchUrl) => {
+    let res = await fetch(searchUrl)
+    let data = await res.json()
+    setSearched(true)
+    setSearchedList(data.Search)
+  }
+
   return (
-    <movieContext.Provider value={{ movieListOne, movieListTwo }}>
+    <movieContext.Provider value={{ movieListOne, movieListTwo, handleSearch, searchedList, searched }}>
       <div className="App">
         <nav>
           <TopBar />

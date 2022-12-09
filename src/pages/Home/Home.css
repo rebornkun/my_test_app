@@ -54,6 +54,13 @@
 
     color: #000000;
 }
+
+.searchbar p:last-of-type{
+    width: fit-content;
+    height: fit-content;
+    font-size: 16px;
+    cursor: pointer;
+}
 .search_input{
     width: 100%;
     height: 54px;
@@ -132,6 +139,11 @@
         line-height: 21px;
         margin-bottom: 4px;
     }
+    .searchbar p:last-of-type{
+        width: fit-content;
+        height: fit-content;
+        font-size: 16px;
+    }
     
     .search_input{
         width: 100%;
@@ -139,6 +151,7 @@
         padding: 5px;
         font-size: 12px;
     }
+
     
     .movie_categories_container{
         padding-left: 28px;
